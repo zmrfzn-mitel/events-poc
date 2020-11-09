@@ -1,0 +1,6 @@
+<div style="border: 1px solid green; margin:5px; padding: 10px;">
+  <h1>Main</h1>
+  <div>
+    <span *ngFor="let path of compPaths"><a [routerLink]='path.path'>| {{path.name}} </a> |</span>
+  </div>
+</div>

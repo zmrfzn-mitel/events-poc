@@ -8,7 +8,7 @@ import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+
   {path: 'child', component: childComponent},
   {path: 'grandchild-1', component: GrandChild1Component},
   {path: 'grandchild-2', component: GrandChild2Component}
