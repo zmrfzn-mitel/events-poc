@@ -22,7 +22,7 @@ export class EventsManagerService implements OnDestroy {
   }
 
   public listenEvent(type: string): Observable<ICuxEvent> {
-    console.log('listenEvent()');
+    console.log('listenEvent()=>',type);
     return this.eventsHub.pipe(
       filter(event => event.type === type)
       );

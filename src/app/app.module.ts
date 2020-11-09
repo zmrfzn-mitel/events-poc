@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Test1Component } from './test1/test1.component';
-import { Test2Component } from './test2/test2.component';
+import { childComponent } from './child/child.component';
+import { GrandChild1Component } from './grand-child1/grand-child1.component';
+import { GrandChild2Component } from './grand-child2/grand-child2.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [					
     AppComponent,
-      Test1Component,
-      Test2Component
+    childComponent,
+      GrandChild1Component,
+      GrandChild2Component,
+      MainComponent
    ],
   imports: [
     BrowserModule,

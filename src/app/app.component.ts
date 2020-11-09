@@ -9,12 +9,17 @@ import { EventsManagerService } from './services/events-manager.service';
 export class AppComponent implements OnInit {
   name = 'Angular';
 
-  constructor(private evtSvc: EventsManagerService){}
+  constructor(private evtSvc: EventsManagerService) { }
 
   ngOnInit() {
-    this.evtSvc.listenEvent('test1').subscribe(evt => {
 
-      console.log('event received ', evt);
+    this.evtSvc.listenEvent('child').subscribe(evt => {
+      console.log('=> event received in AppComponent  from', evt);
     });
+    this.evtSvc.listenEvent('grand-child-2').subscribe(evt => {
+      console.log('=> event received in AppComponent  from', evt);
+    });
+
+
   }
 }

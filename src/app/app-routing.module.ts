@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { Test1Component } from './test1/test1.component';
-import { Test2Component } from './test2/test2.component';
+import { childComponent } from './child/child.component';
+import { GrandChild1Component } from './grand-child1/grand-child1.component';
+import { GrandChild2Component } from './grand-child2/grand-child2.component';
+import { MainComponent } from './main/main.component';
+
 
 const routes: Routes = [
-  {path: 'test1', component: Test1Component},
-  {path: 'test2', component: Test2Component}
+  {path: '', component: AppComponent},
+  {path: 'child', component: childComponent},
+  {path: 'grandchild-1', component: GrandChild1Component},
+  {path: 'grandchild-2', component: GrandChild2Component}
 ];
 
 @NgModule({
