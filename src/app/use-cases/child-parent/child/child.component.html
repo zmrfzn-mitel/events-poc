@@ -1,0 +1,40 @@
+<div class="card border-dark mb-3">
+  <div class="card-body bg-light">
+    <h5 class="card-title">Child to Parent Component</h5>
+    <div class="card-text">
+      <h6>parent</h6>
+    <div> 
+      <section >
+        
+       -> Created event(s): <mark>{{ eventName}}</mark>
+        <pre><code class="code-block">
+        eventName = '{{eventName}}';
+        event: ICuxEvent = new CuxEvent(this.eventName);
+        </code></pre>
+      </section>
+    </div>
+
+    <div> 
+      <section >
+        
+        <!-- -> Subscribed event(s): <mark>{{ eventName}}</mark>
+        <pre><code class="code-block" ngNonBindable>
+          this.subscriptions.push(
+            this.evtSvc.listenEvent(this.eventName).subscribe(evt => &#123;
+              this.eventOutput = evt.eventData;
+              &#125;)
+          );
+        </code></pre> -->
+      </section>
+    </div>
+
+
+    <p>
+      <button (click)="fireEvent()" type="button" class="btn btn-info">Trigger event</button>
+
+ 
+    </p>
+  
+  </div>
+  </div>
+</div>

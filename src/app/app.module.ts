@@ -1,24 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { childComponent } from './child/child.component';
-import { GrandChild1Component } from './grand-child1/grand-child1.component';
-import { GrandChild2Component } from './grand-child2/grand-child2.component';
+
 import { MainComponent } from './main/main.component';
+import { SimpleEventComponent } from './use-cases/simple-event/simple-event.component';
+import { ChildParentComponent } from './use-cases/child-parent/child-parent.component';
+import { ChildComponent } from './use-cases/child-parent/child/child.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
-    childComponent,
-      GrandChild1Component,
-      GrandChild2Component,
-      MainComponent
-   ],
+
+    MainComponent,
+
+    SimpleEventComponent,
+
+    ChildParentComponent,
+
+    ChildComponent,
+
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,5 @@
-<div style="border: 1px solid green; margin:5px; padding: 10px;">
-  <h1>Main</h1>
-  <div>
-    <span *ngFor="let path of compPaths"><a [routerLink]='path.path'>| {{path.name}} </a> |</span>
-  </div>
+<div class="list-group list-group-flush">
+  <span *ngFor="let path of compPaths">
+    <a [routerLink]='path.path' href="#" class="list-group-item list-group-item-action bg-light"> {{path.name}} </a>
+  </span>
 </div>

@@ -11,13 +11,11 @@ export class MainComponent implements OnInit {
 
   compPaths = [
     {path: '', name : 'Home'},
-    {path: 'child', name : 'child'},
-    {path: 'grandchild-1', name : 'grand-child-1'},
+    {path: 'simple', name : 'Simple Event'},
+    {path: 'child-parent', name : 'Child to Parent'},
     {path: 'grandchild-2', name : 'grand-child-2'},
-  ]
+  ];
 
-  ngOnInit() {
-   
-  }
+  ngOnInit() {}
 
 }

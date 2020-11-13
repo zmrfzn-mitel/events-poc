@@ -1,0 +1,39 @@
+<div class="card border-dark mb-3">
+  <div class="card-body bg-light">
+    <h5 class="card-title">Simple Event</h5>
+    <div class="card-text">
+  
+    <div> 
+      <section >
+       -> Created event(s): <mark>{{ eventName}}</mark>
+        <pre><code class="code-block">
+        eventName = 'simpleEvent';
+        event: ICuxEvent = new CuxEvent(this.eventName);
+        </code></pre>
+      </section>
+    </div>
+
+    <div> 
+      <section >
+       -> Subscribed event(s): <mark>{{ eventName}}</mark>
+        <pre><code class="code-block" ngNonBindable>
+          this.subscriptions.push(
+            this.evtSvc.listenEvent(this.eventName).subscribe(evt => &#123;
+              this.eventOutput = evt.eventData;
+              &#125;)
+          );
+        </code></pre>
+      </section>
+    </div>
+
+
+    <p>
+      <button (click)="fireEvent()" type="button" class="btn btn-info">Trigger event</button>
+      <button (click)="clearEvent()" type="button" class="btn btn-info">Clear</button>
+    </p>
+    <div *ngIf="eventOutput">
+      Event Output: <span class="badge badge-secondary"> {{eventOutput}}</span>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,2 +1,49 @@
-<app-main></app-main>
-<router-outlet></router-outlet>
+<div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">Events Manager POC </div>
+    <app-main></app-main>
+
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+
+    <div class="container-fluid main-container border border-info">
+
+      <h1 class="card-header">Home</h1>
+      <div class="card-body text-dark">
+        <div class="card-text">
+          <!-- <div>
+            <h6>
+              cuxEvent object :
+            </h6>
+            <pre>
+                <code class="code-block" >
+                  export interface ICuxEvent &#123;
+                    identifier?: string;
+                    type: string;
+                    eventData: any;
+                  &#125;
+                </code>
+            </pre>
+
+            <h6> Creating new events:</h6>
+            <br> eventName will be of type -> <code class="code-block">ICuxEvent.type</code>
+            <pre>
+              <code class="code-block">
+                event: ICuxEvent = new CuxEvent('eventName');
+            </code>
+          </pre>
+          </div> -->
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>

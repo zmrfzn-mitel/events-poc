@@ -1,7 +1,7 @@
 export interface ICuxEvent {
     identifier?: string;
     type: string;
-    event: any; // data
+    eventData: any;
   }
 
   export class CuxEvent implements ICuxEvent {
@@ -10,7 +10,7 @@ export interface ICuxEvent {
     // interface props
     identifier = '';
     type;
-    event;
+    eventData;
 
     // named constructor
     constructor(_type: string) {

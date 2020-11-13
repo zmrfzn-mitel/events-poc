@@ -7,9 +7,17 @@ import { EventsManagerService } from './services/events-manager.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  name = 'Angular';
 
   constructor(private evtSvc: EventsManagerService) { }
+  name = 'Angular';
+
+  interfaceSnippet = `
+  export interface ICuxEvent {
+    identifier?: string;
+    type: string;
+    eventData: any;
+  }
+  `;
 
   ngOnInit() {
 
