@@ -28,13 +28,22 @@
     </div>
 
 
-    <p>
-      <app-child-parent [eventName]="eventName"></app-child-parent>
+    <div>
+      <div *ngIf="!isMulti">
+        <app-child-parent [eventName]="eventName"></app-child-parent>
+      </div>
+      <div *ngIf="isMulti">
+        <app-multiple-events [eventName1]="multiEvent[0].name" [eventName2]="multiEvent[1].name" ></app-multiple-events>
+      </div>
       <button (click)="clearEvent()" type="button" class="btn btn-info">Clear</button>
-    </p>
+    </div>
     <div *ngIf="eventOutput">
       Event Output: <span class="badge badge-secondary"> {{eventOutput}}</span>
     </div>
+
+    <div *ngIf="isMulti"><div *ngFor="let evt of multiEvent">
+    Event Output: <span class="badge badge-secondary" *ngIf="evt.output"> {{evt.output}}</span>
+    </div></div>
   </div>
   </div>
 </div>

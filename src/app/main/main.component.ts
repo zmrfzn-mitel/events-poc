@@ -14,6 +14,8 @@ export class MainComponent implements OnInit {
     {path: 'simple', name : 'Simple Event'},
     {path: 'child-parent', name : 'Child to Parent'},
     {path: 'shared-multi-instance', name : 'Component with multiple Instances'},
+    {path: 'child-parent/isMulti', name : 'Component with more than one event',data: true}
+    
   ];
 
   ngOnInit() {}
