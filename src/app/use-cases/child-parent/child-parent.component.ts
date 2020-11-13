@@ -30,6 +30,7 @@ export class ChildParentComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    console.log('clearing subscriptions');
     this.subscriptions.forEach(subs => subs.unsubscribe());
   }
 }

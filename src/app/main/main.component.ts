@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
     {path: '', name : 'Home'},
     {path: 'simple', name : 'Simple Event'},
     {path: 'child-parent', name : 'Child to Parent'},
-    {path: 'grandchild-2', name : 'grand-child-2'},
+    {path: 'shared-multi-instance', name : 'Component with multiple Instances'},
   ];
 
   ngOnInit() {}

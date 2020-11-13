@@ -19,15 +19,5 @@ export class AppComponent implements OnInit {
   }
   `;
 
-  ngOnInit() {
-
-    this.evtSvc.listenEvent('child').subscribe(evt => {
-      console.log('=> event received in AppComponent  from', evt);
-    });
-    this.evtSvc.listenEvent('grand-child-2').subscribe(evt => {
-      console.log('=> event received in AppComponent  from', evt);
-    });
-
-
-  }
+  ngOnInit() { }
 }

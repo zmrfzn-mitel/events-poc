@@ -19,7 +19,7 @@ childEvent: ICuxEvent;
   }
 
   fireEvent() {
-    this.childEvent.eventData = 'Hello Mother!';
+    this.childEvent.eventData = this.eventName;
     this.evtSvc.sendEvent(this.childEvent);
   }
 

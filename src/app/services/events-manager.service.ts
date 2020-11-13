@@ -17,7 +17,7 @@ export class EventsManagerService implements OnDestroy {
   constructor() { }
 
   public sendEvent(evt: ICuxEvent) {
-      console.log('sendEvent()', evt.identifier);
+      console.log('sendEvent()\n id:', evt.identifier + '\n name:' + evt.type);
       this.eventsHub.next(evt);
   }
 

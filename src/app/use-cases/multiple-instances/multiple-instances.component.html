@@ -1,0 +1,48 @@
+<div class="card border-dark mb-3">
+  <div class="card-body bg-light">
+    <h5 class="card-title">Shared Component Multiple Instances</h5>
+    <div class="card-text">
+      <h6>parent</h6>
+    <div> 
+      <section >
+        -> Events created in children. child component looped {{events.length}} times, as per given data
+       
+        <pre><code class="code-block" ngNonBindable>
+          events = [
+          &#123; name: 'first', eventOutput: undefined &#125;,
+          &#123; name: 'second', eventOutput: undefined &#125;,
+          &#123; name: 'third', eventOutput: undefined &#125;
+        ];
+        </code></pre>
+      </section>
+    </div>
+
+    <div> 
+      <section >
+        <span *ngFor="let event of events">-> Subscribed event(s): <mark>{{ event.name}}</mark> <br></span>
+        <pre><code class="code-block" ngNonBindable>
+          this.subscriptions.push(
+            this.evtSvc.listenEvent(this.events[0].name).subscribe(evt => &#123;
+              this.events[0].eventOutput = evt.eventData;
+            &#125;),
+            this.evtSvc.listenEvent(this.events[1].name).subscribe(evt => &#123;
+              this.events[1].eventOutput = evt.eventData;
+            &#125;)
+          );
+        </code></pre>
+      </section>
+    </div>
+
+
+    <div>
+      <div *ngFor="let event of events">
+        <app-child-parent [eventName]="event.name"></app-child-parent>
+      </div>
+      <button (click)="clearEvent()" type="button" class="btn btn-info">Clear</button>
+    </div>
+    <div *ngFor="let event of events">>
+      Event Output: <span class="badge badge-secondary" *ngIf="event.eventOutput"> {{event.eventOutput}}</span>
+    </div>
+  </div>
+  </div>
+</div>

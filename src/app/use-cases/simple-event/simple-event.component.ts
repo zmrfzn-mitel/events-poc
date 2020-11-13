@@ -34,6 +34,7 @@ export class SimpleEventComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    console.log('clearing subscriptions');
     this.subscriptions.forEach(subs => subs.unsubscribe());
   }
 }

@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { SimpleEventComponent } from './use-cases/simple-event/simple-event.component';
 import { ChildParentComponent } from './use-cases/child-parent/child-parent.component';
 import { ChildComponent } from './use-cases/child-parent/child/child.component';
+import { MultipleInstancesComponent } from './use-cases/multiple-instances/multiple-instances.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { ChildComponent } from './use-cases/child-parent/child/child.component';
     ChildParentComponent,
 
     ChildComponent,
+
+    MultipleInstancesComponent,
 
   ],
   imports: [
