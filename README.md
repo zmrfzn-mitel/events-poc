@@ -2,6 +2,8 @@
 
 ## Details
 
+Makes use of Observer Pattern using RxJs.
+
 [JIRA SBOSS-22545](https://voko.atlassian.net/browse/SBOSS-22545) 
 
 #### Custom Event Type
