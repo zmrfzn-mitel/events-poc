@@ -12,25 +12,25 @@ import { ICuxEvent } from '../models/CuxEvent';
 
 export class EventsManagerService implements OnDestroy {
 
-  private eventsHub:  Subject<ICuxEvent> = new Subject<ICuxEvent>();
+  private messageBus:  Subject<ICuxEvent> = new Subject<ICuxEvent>();
 
   constructor() { }
 
-  public sendEvent(evt: ICuxEvent) {
+  public send(evt: ICuxEvent) {
       console.log('sendEvent()\n id:', evt.identifier + '\n name:' + evt.type);
-      this.eventsHub.next(evt);
+      this.messageBus.next(evt);
   }
 
-  public listenEvent(type: string): Observable<ICuxEvent> {
+  public listen(type: string): Observable<ICuxEvent> {
     console.log('listenEvent()=>',type);
-    return this.eventsHub.pipe(
+    return this.messageBus.pipe(
       filter(event => event.type === type)
       );
   }
 
   ngOnDestroy() {
     console.log('onDestroy()');
-    this.eventsHub.complete();
+    this.messageBus.complete();
   }
 
 

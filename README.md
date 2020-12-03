@@ -37,7 +37,7 @@ add the data to the event Object and send.
 
 ```
 this.customEvent.eventData = 'Custom Event Data';
-this.eventSvc.sendEvent(this.customEvent);
+this.eventSvc.send(this.customEvent);
 ```
 
 #### Listen/Subscribe Events
@@ -45,7 +45,7 @@ this.eventSvc.sendEvent(this.customEvent);
 Listen/Subscribe to the created event with its name. 
 
 ```
-this.eventSvc.listenEvent('eventName').subscribe(evt => {
+this.eventSvc.listen('eventName').subscribe(evt => {
         // Do your thing
 });
 ```

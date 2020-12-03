@@ -21,13 +21,13 @@ export class MultipleInstancesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscriptions.push(
-      this.evtSvc.listenEvent(this.events[0].name).subscribe(evt => {
+      this.evtSvc.listen(this.events[0].name).subscribe(evt => {
         this.events[0].eventOutput = evt.eventData;
       }),
-      this.evtSvc.listenEvent(this.events[1].name).subscribe(evt => {
+      this.evtSvc.listen(this.events[1].name).subscribe(evt => {
         this.events[1].eventOutput = evt.eventData;
       }),
-      this.evtSvc.listenEvent(this.events[2].name).subscribe(evt => {
+      this.evtSvc.listen(this.events[2].name).subscribe(evt => {
         this.events[2].eventOutput = evt.eventData;
       })
     );

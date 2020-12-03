@@ -20,7 +20,7 @@ childEvent: ICuxEvent;
 
   fireEvent() {
     this.childEvent.eventData = this.eventName;
-    this.evtSvc.sendEvent(this.childEvent);
+    this.evtSvc.send(this.childEvent);
   }
 
 }

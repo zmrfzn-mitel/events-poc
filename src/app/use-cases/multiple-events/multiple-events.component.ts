@@ -25,8 +25,8 @@ childEvent2: ICuxEvent;
   fireEvent() {
     this.childEvent1.eventData = this.eventName1;
     this.childEvent2.eventData = this.eventName2;
-    this.evtSvc.sendEvent(this.childEvent1);
-    this.evtSvc.sendEvent(this.childEvent2);
+    this.evtSvc.send(this.childEvent1);
+    this.evtSvc.send(this.childEvent2);
   }
 
 }

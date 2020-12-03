@@ -32,17 +32,17 @@ export class ChildParentComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if(!this.isMulti){
     this.subscriptions.push(
-      this.evtSvc.listenEvent(this.eventName).subscribe(evt => {
+      this.evtSvc.listen(this.eventName).subscribe(evt => {
         this.eventOutput = evt.eventData;
       })
     );
   }
   if(this.isMulti){
     this.subscriptions.push(
-      this.evtSvc.listenEvent(this.multiEvent[0].name).subscribe(evt => {
+      this.evtSvc.listen(this.multiEvent[0].name).subscribe(evt => {
         this.multiEvent[0].output = evt.eventData;
       }),
-      this.evtSvc.listenEvent(this.multiEvent[1].name).subscribe(evt => {
+      this.evtSvc.listen(this.multiEvent[1].name).subscribe(evt => {
         this.multiEvent[1].output = evt.eventData;
       })
     );

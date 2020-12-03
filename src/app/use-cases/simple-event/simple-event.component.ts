@@ -19,7 +19,7 @@ export class SimpleEventComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscriptions.push(
-      this.evtSvc.listenEvent(this.eventName).subscribe(evt => {
+      this.evtSvc.listen(this.eventName).subscribe(evt => {
         this.eventOutput = evt.eventData;
       })
     );
@@ -27,7 +27,7 @@ export class SimpleEventComponent implements OnInit, OnDestroy {
 
   fireEvent() {
     this.event.eventData = 'Simple Event Data';
-    this.evtSvc.sendEvent(this.event);
+    this.evtSvc.send(this.event);
   }
   clearEvent() {
     this.eventOutput = undefined;

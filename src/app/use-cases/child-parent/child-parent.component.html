@@ -19,7 +19,7 @@
         -> Subscribed event(s): <mark>{{ eventName}}</mark>
         <pre><code class="code-block" ngNonBindable>
           this.subscriptions.push(
-            this.evtSvc.listenEvent(this.eventName).subscribe(evt => &#123;
+            this.evtSvc.listen(this.eventName).subscribe(evt => &#123;
               this.eventOutput = evt.eventData;
               &#125;)
           );
